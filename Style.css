@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe4e1;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff2a68;
+    margin-bottom: 20px;
+}
+
+.message h2 {
+    font-size: 2rem;
+    color: #d63e9a;
+}
+
+.message p {
+    font-size: 1.2rem;
+    color: #8b008b;
+    margin-top: 10px;
+}
+
+.heart-shape {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 30px auto;
+    background-color: #ff2a68;
+    transform: rotate(45deg);
+    animation: beat 1.5s infinite;
+}
+
+.heart-shape::before,
+.heart-shape::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff2a68;
+    border-radius: 50%;
+}
+
+.heart-shape::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart-shape::after {
+    left: 50px;
+    top: 0;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    background-color: #ff2a68;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d63e9a;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+@keyframes beat {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .message h2 {
+        font-size: 1.5rem;
+    }
+
+    .message p {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
